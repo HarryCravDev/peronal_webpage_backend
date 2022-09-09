@@ -3,7 +3,7 @@ import { sendEmail } from "../utils/email/email";
 import { v4 as uuidv4 } from "uuid";
 import { Message } from "../entity/message.entity";
 // import { any } from "src/types/any";
-import { messageData } from "../data/message-data/message-data";
+// import { messageData } from "../data/message-data/message-data";
 import { IMessage } from "src/types/IMessage";
 
 export class MessageService {
@@ -32,12 +32,12 @@ export class MessageService {
 
   async getMessages(): Promise<any> {
     try {
-      const res: IMessage[] = messageData;
+      // const res: IMessage[] = messageData;
 
       return {
         success: true,
         message: "Message successfully sent.",
-        data: res,
+        // data: res,
       };
     } catch (error) {
       return { success: false, message: error as string };
